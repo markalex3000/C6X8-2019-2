@@ -12,7 +12,7 @@ For each sentence entered, the program should simply repsond "OK" or "Not OK"
 Hint - don't bother with tokens, just read into a string using >>.
 */
 
-#include "pch.h"
+
 #include "C:\Users\mark.alexieff\source\repos\std_lib_facilities.h"
 
 
@@ -25,10 +25,10 @@ Hint - don't bother with tokens, just read into a string using >>.
 	Continues to ask for sentences until  "XXX" is entered as first word of sentence
 */
 
-vector<string> conjunctions;			// vectors to hold the vocab/parts of speech
-vector<string> nouns;					// they get initialized later on
-vector<string> verbs;
-vector<string> articles;
+vector<string> conjunctions = { "and", "but", "for" };		// vectors to hold the vocab/parts of speech
+vector<string> nouns = { "birds", "fish", "C++" };				
+vector<string> verbs = { "fly", "swim", "rule" };
+vector<string> articles = { "the" };
 
 bool copy_sentence(vector<string>& s1, int pos, vector<string>& s2);
 
@@ -87,22 +87,6 @@ try
 	vector<string> sentence_to_test;
 	bool ret_value{ true };
 	bool keep_going{ true };
-
-	// Initialize vectors
-
-	conjunctions.push_back("and");				// Initialize the vectors of parts of speech
-	conjunctions.push_back("or");				// likely there is a better way to do this
-	conjunctions.push_back("but");
-
-	nouns.push_back("birds");
-	nouns.push_back("fish");
-	nouns.push_back("C++");
-
-	verbs.push_back("rules");
-	verbs.push_back("fly");
-	verbs.push_back("swim");
-
-	articles.push_back("the");
 
 	cout << "Welcome to the English Grammar Checker V1.0\n";
 
